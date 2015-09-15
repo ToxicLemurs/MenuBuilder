@@ -2,7 +2,7 @@
 
 Require this package in your composer.json and update composer. This will download the package and all the dependencies.
 
-    "toxiclemurs/menu-builder": "1.*"
+    "toxic-lemurs/menu-builder": "1.*"
 
 ## Installation
 
