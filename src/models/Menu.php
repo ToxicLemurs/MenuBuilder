@@ -54,7 +54,7 @@ class Menu extends Model
 
         $group = Group::whereName($groupName)->first();
 
-        if ($group->count()) {
+        if ($group && $group->count()) {
             $menu = Menu::whereGroupId($group->id)
                 ->whereActive(1)
                 ->orderBy('order')
