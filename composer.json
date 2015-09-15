@@ -1,7 +1,7 @@
 {
     "name": "toxic-lemurs/menu-builder",
-    "description": "A simple menu builder for Laravel 5.1.*",
-    "keywords": ["menu", "menu-builder"],
+    "description": "A simple database driven menu manager for Laravel 5",
+    "keywords": ["menu", "menu-builder", "html menus", "html", "menus", "eloquent", "laravel", "template", "database", "simple"],
     "homepage": "https://github.com/ToxicLemurs/MenuBuilder",
     "license": "MIT",
     "authors": [
@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "php" : ">=5.3.0",
+        "php" : ">=5.5.9",
         "illuminate/support": "5.0.x|5.1.x"
     },
     "autoload": {

@@ -40,6 +40,16 @@ class MenuBuilderServiceProvider extends ServiceProvider
         $this->publishes([
             realpath(__DIR__ . '/resources/views') => base_path('resources/views/vendor/menuBuilder'),
         ], 'views');
+
+        // Publish config
+        $this->publishes([
+            realpath(__DIR__ . '/config/config.php') => config_path('menuBuilder/config.php'),
+        ], 'config');
+
+        // Use the vendor configuration file as fallback
+        $this->mergeConfigFrom(
+            realpath(__DIR__ . '/config/config.php'), 'menuBuilder/config'
+        );
     }
 
     /**
@@ -64,6 +74,10 @@ class MenuBuilderServiceProvider extends ServiceProvider
     public function register()
     {
         $this->registerMenuBuilder();
+
+        config([
+            'config/config.php',
+        ]);
     }
 
     /**
