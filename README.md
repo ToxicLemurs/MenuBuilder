@@ -61,6 +61,8 @@ You can override the default implementation of how the menu gets rendered by mod
     views/menu/default.blade.php - This is the master template for binding the menu partials
     views/menu/partials/list.blade.php - This is the partial that creates the list items / html for the menu
     
+You can look inside the example folder for an implementation of the Menu Builder by copying the vendor folder into your resources folder. Make sure your database contains menu items. Example source can be [found here](http://bootsnipp.com/snippets/featured/responsive-navigation-menu).
+    
 ### License:
 
 This Menu Builder for Laravel is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
