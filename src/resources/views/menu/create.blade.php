@@ -32,7 +32,7 @@
                 <select name="parent" id="parent" class="form-control">
                     <option value="">None</option>
                     @foreach($items as $menuItem)
-                        <option value="{{ $menuItem->id }}" @if(isset($item) && $item->parent === $menuItem->id) selected="selected" @endif>{{ \App\Group::getGroupName($menuItem->group_id) }} - {{ $menuItem->title }}</option>
+                        <option value="{{ $menuItem->id }}" @if(isset($item) && $item->parent === $menuItem->id) selected="selected" @endif>{{ ToxicLemurs\MenuBuilder\models\Group::getGroupName($menuItem->group_id) }} - {{ $menuItem->title }}</option>
                     @endforeach
                 </select>
                 @if($errors->has('parent'))
