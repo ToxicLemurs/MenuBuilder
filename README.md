@@ -53,13 +53,25 @@ Default routes have been setup for managing the menu:
 You can override the default routes with your own custom routes (The package routes are currently defined individually and not as resources to allow for override flexibility):
 
     Route::get('my/route/menu', ['uses' => '\ToxicLemurs\MenuBuilder\Http\Controllers\MenuController@index', 'as' => 'menu.index'])
-  
+
 ## Overriding the views:
 
 You can override the default implementation of how the menu gets rendered by modifying your published views:
 
     views/menu/default.blade.php - This is the master template for binding the menu partials
     views/menu/partials/list.blade.php - This is the partial that creates the list items / html for the menu
+    
+Alternatively you can specify custom templates to use for your base templates on a per menu level:
+
+    {!! MenuBuilder::render('Group Name', $options = [
+        'templates' => [
+            // The container file overrides the views/menu/default.blade.php template
+            'container' => 'foo.bar', // resources/views/foo/bar.blade.php
+            
+            // The builder file overrides the views/menu/partials/list.blade.php
+            'builder' => 'bar.foo', // resource/views/bar/foo.blade.php
+        ]
+    ]) !!}
     
 You can look inside the example folder for an implementation of the Menu Builder by copying the vendor folder into your resources folder. Make sure your database contains menu items. Example source can be [found here](http://bootsnipp.com/snippets/featured/responsive-navigation-menu).
     

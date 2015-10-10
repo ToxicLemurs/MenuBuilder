@@ -15,11 +15,12 @@ class MenuBuilder
      * Renders a menu based on group
      *
      * @param string $group
+     * @param array $options
      *
      * @return \Illuminate\View\View|null
      */
-    public function render($group)
+    public function render($group, array $options = null)
     {
-        return Menu::render($group);
+        return Menu::render($group, $options);
     }
 }

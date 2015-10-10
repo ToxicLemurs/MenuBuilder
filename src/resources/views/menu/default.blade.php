@@ -1,1 +1,3 @@
-{!! \ToxicLemurs\MenuBuilder\models\Menu::generateMenuHtml($menuTree) !!}
+<ul>
+    {!! \ToxicLemurs\MenuBuilder\models\Menu::generateMenuHtml($menuTree) !!}
+</ul>

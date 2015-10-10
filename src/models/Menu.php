@@ -34,6 +34,8 @@ class Menu extends Model
         'small_text'
     ];
 
+    protected static $options = [];
+
     /**
      * @var array
      */
@@ -43,11 +45,14 @@ class Menu extends Model
      * Compiles and returns a menu structure based on a template
      *
      * @param string $groupName
+     * @param array $options
      *
      * @return View|null
      */
-    public static function render($groupName)
+    public static function render($groupName, array $options = null)
     {
+        self::$options = $options;
+
         if (empty($groupName)) {
             return null;
         }
@@ -64,7 +69,11 @@ class Menu extends Model
             self::$tree = self::buildMenuTree($menu);
         }
 
-        return view('menuBuilder::menu.default', ['menuTree' => self::$tree]);
+        if (isset($options['templates']) && isset($options['templates']['container'])) {
+            return view($options['templates']['container'], ['menuTree' => self::$tree, 'options' => $options]);
+        }
+
+        return view('menuBuilder::menu.default', ['menuTree' => self::$tree, 'options' => $options]);
     }
 
     /**
@@ -79,8 +88,12 @@ class Menu extends Model
     {
         $html = '';
 
+        $template = isset(self::$options['templates']) && isset(self::$options['templates']['builder'])
+            ? self::$options['templates']['builder']
+            : 'menuBuilder::menu.partials.list';
+
         foreach ($menuItems as $menuItem) {
-            $html .= view('menuBuilder::menu.partials.list', ['item' => $menuItem, 'child' => $child]);
+            $html .= view($template, ['item' => $menuItem, 'child' => $child]);
         }
 
         return $html;
