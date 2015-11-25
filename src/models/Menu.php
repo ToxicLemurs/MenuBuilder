@@ -188,4 +188,16 @@ class Menu extends Model
     {
         return Menu::destroy($id);
     }
+
+    /**
+     * Returns a parent id based on title
+     *
+     * @param string $title
+     *
+     * @return int
+     */
+    public function getParentIdFromTitle($title)
+    {
+        return $this->whereTitle($title)->firstOrFail()->id;
+    }
 }

@@ -70,4 +70,16 @@ class Group extends Model
     {
         return Group::destroy($id);
     }
+
+    /**
+     * Returns the group id based on group name
+     *
+     * @param string $name
+     *
+     * @return int
+     */
+    public function getGroupIdFromName($name)
+    {
+        return $this->whereName($name)->firstOrFail()->id;
+    }
 }
