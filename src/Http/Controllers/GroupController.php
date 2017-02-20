@@ -7,7 +7,7 @@ use ToxicLemurs\MenuBuilder\Http\Requests\GroupPostRequest;
 use ToxicLemurs\MenuBuilder\Http\Requests\GroupPostEditRequest;
 use Illuminate\Routing\Redirector;
 use Illuminate\View\View;
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller;
 
 /**
  * Class GroupController
