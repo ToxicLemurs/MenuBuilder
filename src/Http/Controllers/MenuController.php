@@ -7,7 +7,7 @@ use ToxicLemurs\MenuBuilder\models\Menu as Menu;
 use ToxicLemurs\MenuBuilder\Http\Requests\MenuItemRequest;
 use Illuminate\Routing\Redirector;
 use Illuminate\View\View;
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller;
 
 /**
  * Class MenuController
