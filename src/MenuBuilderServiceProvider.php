@@ -1,4 +1,8 @@
 <?php
+/**
+ * Copyright © Toxic-Lemurs. All rights reserved.
+ * See license.txt for license details.
+ */
 
 namespace ToxicLemurs\MenuBuilder;
 

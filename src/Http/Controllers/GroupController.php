@@ -1,7 +1,12 @@
 <?php
+/**
+ * Copyright © Toxic-Lemurs. All rights reserved.
+ * See license.txt for license details.
+ */
 
 namespace ToxicLemurs\MenuBuilder\Http\Controllers;
 
+use Illuminate\Support\Facades\Input;
 use ToxicLemurs\MenuBuilder\models\Group as Group;
 use ToxicLemurs\MenuBuilder\Http\Requests\GroupPostRequest;
 use ToxicLemurs\MenuBuilder\Http\Requests\GroupPostEditRequest;
@@ -45,7 +50,7 @@ class GroupController extends Controller
      */
     public function store(GroupPostRequest $request)
     {
-        (new Group())->addGroup(\Input::get('name'));
+        (new Group())->addGroup(Input::get('name'));
 
         return redirect(route('group.index'));
     }
@@ -66,13 +71,13 @@ class GroupController extends Controller
      * Store method for the updating of groups
      *
      * @param GroupPostEditRequest $request
-     * @param int                  $id
+     * @param int $id
      *
      * @return Redirector
      */
     public function update(GroupPostEditRequest $request, $id)
     {
-        (new Group())->updateGroup($id, \Input::get('name'));
+        (new Group())->updateGroup($id, Input::get('name'));
 
         return redirect(route('group.index'));
     }

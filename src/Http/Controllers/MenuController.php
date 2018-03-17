@@ -1,7 +1,12 @@
 <?php
+/**
+ * Copyright © Toxic-Lemurs. All rights reserved.
+ * See license.txt for license details.
+ */
 
 namespace ToxicLemurs\MenuBuilder\Http\Controllers;
 
+use Illuminate\Support\Facades\Input;
 use ToxicLemurs\MenuBuilder\models\Group as Group;
 use ToxicLemurs\MenuBuilder\models\Menu as Menu;
 use ToxicLemurs\MenuBuilder\Http\Requests\MenuItemRequest;
@@ -44,7 +49,7 @@ class MenuController extends Controller
      */
     public function store(MenuItemRequest $request)
     {
-        (new Menu())->createMenuItem(\Input::all());
+        (new Menu())->createMenuItem(Input::all());
 
         return redirect(route('menu.index'));
     }
@@ -65,13 +70,13 @@ class MenuController extends Controller
      * Update and existing menu item
      *
      * @param MenuItemRequest $request
-     * @param int             $id
+     * @param int $id
      *
      * @return Redirector
      */
     public function update(MenuItemRequest $request, $id)
     {
-        (new Menu())->updateMenuItem($id, \Input::all());
+        (new Menu())->updateMenuItem($id, Input::all());
 
         return redirect(route('menu.index'));
     }

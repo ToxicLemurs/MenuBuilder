@@ -1,4 +1,8 @@
 <?php
+/**
+ * Copyright © Toxic-Lemurs. All rights reserved.
+ * See license.txt for license details.
+ */
 
 namespace ToxicLemurs\MenuBuilder\models;
 
@@ -80,7 +84,7 @@ class Menu extends Model
      * Generate the menu html
      *
      * @param array $menuItems
-     * @param bool  $child
+     * @param bool $child
      *
      * @return string
      */
@@ -103,7 +107,7 @@ class Menu extends Model
      * Iterate through the menu structure and build the parent child relationships
      *
      * @param array $menuArray
-     * @param int   $parent
+     * @param int $parent
      *
      * @return array
      */
@@ -157,7 +161,7 @@ class Menu extends Model
     /**
      * Update an existing menu item
      *
-     * @param int   $id
+     * @param int $id
      * @param array $item
      *
      * @return bool|int

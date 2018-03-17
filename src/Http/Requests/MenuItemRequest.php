@@ -1,8 +1,12 @@
 <?php
+/**
+ * Copyright © Toxic-Lemurs. All rights reserved.
+ * See license.txt for license details.
+ */
 
 namespace ToxicLemurs\MenuBuilder\Http\Requests;
 
-use App\Http\Requests\Request;
+use Illuminate\Http\Request;
 
 /**
  * Class MenuItemRequest

@@ -1,4 +1,8 @@
 <?php
+/**
+ * Copyright © Toxic-Lemurs. All rights reserved.
+ * See license.txt for license details.
+ */
 
 namespace ToxicLemurs\MenuBuilder\models;
 
@@ -24,7 +28,6 @@ class Group extends Model
      * Creates a new group based on name
      *
      * @param string $name
-
      * @return static
      */
     public function addGroup($name)

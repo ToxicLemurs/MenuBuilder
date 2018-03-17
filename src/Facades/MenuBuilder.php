@@ -1,11 +1,8 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: derik
- * Date: 2015/09/14
- * Time: 7:12 PM
+ * Copyright © Toxic-Lemurs. All rights reserved.
+ * See license.txt for license details.
  */
-
 namespace ToxicLemurs\MenuBuilder\Facades;
 
 /**
