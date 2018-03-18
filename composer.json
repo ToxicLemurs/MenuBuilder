@@ -25,5 +25,15 @@
         "psr-4": {
             "ToxicLemurs\\MenuBuilder\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+            "ToxicLemurs\\MenuBuilder\\MenuBuilderServiceProvider"
+        ],
+        "aliases": {
+            "MenuBuilder": "ToxicLemurs\\MenuBuilder\\Facades\\MenuBuilder"
+            }
+        }
     }
 }
