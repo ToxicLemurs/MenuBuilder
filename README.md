@@ -11,8 +11,12 @@ Require this package in your composer.json and update composer. This will downlo
 Alternatively you can require this through composer via the command line:
 
     $ composer require toxic-lemurs/menu-builder
+    
+### Laravel 5.5 onward:
 
-### Laravel 5.x:
+The Menu-Builder package now supports Package Auto Discovery.
+
+### Prior to Laravel 5.5:
 
 Run a composer update and add the following Service Provider in your config/app.php
 
