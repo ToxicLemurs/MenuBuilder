@@ -1,4 +1,4 @@
-## Simple database driven menu manager for Laravel 5
+## Simple database driven menu manager for Laravel 6
 
 This package allows you to create tree based menu structures that are database driven (Eloquent) and renders HTML based on fully customizable templates and views. There is no limit the nesting level but the amount of levels will need to be handled in your views / templates. 
 
@@ -6,26 +6,25 @@ This package allows you to create tree based menu structures that are database d
 
 Require this package in your composer.json and update composer. This will download the package and all the dependencies:
 
-    "toxic-lemurs/menu-builder": "1.*"
+    "toxic-lemurs/menu-builder": "2.*"
     
 Alternatively you can require this through composer via the command line:
 
     $ composer require toxic-lemurs/menu-builder
     
-### Laravel 5.5 onward:
+### Laravel Package Auto Discovery:
 
-The Menu-Builder package now supports Package Auto Discovery.
-
-### Prior to Laravel 5.5:
-
-Run a composer update and add the following Service Provider in your config/app.php
+The Menu-Builder package supports Package Auto Discovery.
+If you don't want to use package auto discovery you can add the provider in your config/app.php in the providers array:
 
     ToxicLemurs\MenuBuilder\MenuBuilderServiceProvider::class,
 
-Optionally you can make use of the Facade:
+Optionally you can make use of the Facade bij adding the facade in the aliases array:
 
     'MenuBuilder' => ToxicLemurs\MenuBuilder\Facades\MenuBuilder::class,
     
+### Publish migrations and assets:
+
 Publish the Menu Builder migrations:
 
     $ php artisan vendor:publish --provider="ToxicLemurs\MenuBuilder\MenuBuilderServiceProvider" --tag=migrations
@@ -45,7 +44,7 @@ In your views / templates you can use the Facade to render your menu:
 
     {!! MenuBuilder::render('Group Name') !!}
     
-Alternatively if you do not want to use the Facade:
+Alternatively if you do not want to use the Alias:
 
     {!! ToxicLemurs\MenuBuilder\Facades\MenuBuilder::render('Group Name') !!}
 
