@@ -19,7 +19,7 @@ If you don't want to use package auto discovery you can add the provider in your
 
     ToxicLemurs\MenuBuilder\MenuBuilderServiceProvider::class,
 
-Optionally you can make use of the Facade bij adding the facade in the aliases array:
+Optionally you can make use of the Facade by adding the facade in the aliases array:
 
     'MenuBuilder' => ToxicLemurs\MenuBuilder\Facades\MenuBuilder::class,
     
