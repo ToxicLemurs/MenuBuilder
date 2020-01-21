@@ -6,13 +6,13 @@
 
 namespace ToxicLemurs\MenuBuilder\Http\Requests;
 
-use Illuminate\Http\Request;
+use Illuminate\Foundation\Http\FormRequest;
 
 /**
  * Class MenuItemRequest
  * @package App\Http\Requests
  */
-class MenuItemRequest extends Request
+class MenuItemRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

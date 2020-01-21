@@ -6,13 +6,13 @@
 
 namespace ToxicLemurs\MenuBuilder\Http\Requests;
 
-use Illuminate\Http\Request;
+use Illuminate\Foundation\Http\FormRequest;
 
 /**
  * Class GroupPostRequest
  * @package ToxicLemurs\MenuBuilder\Http\Requests
  */
-class GroupPostRequest extends Request
+class GroupPostRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
